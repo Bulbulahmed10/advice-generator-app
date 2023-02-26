@@ -1,6 +1,7 @@
 //! global constrain
 const copyImgBtn = document.getElementById("copy-text");
 const warningMessageDiv = document.getElementById("warning-message");
+const searchInput = document.getElementById("search-input");
 
 //! fetch data from api
 const loadData = (adviceId) => {
@@ -21,9 +22,18 @@ const loadData = (adviceId) => {
 document.getElementById("search-btn").addEventListener("click", () => {
   warningMessageDiv.style.visibility = "hidden";
 
-  const searchInput = document.getElementById("search-input");
   loadData(`/${searchInput.value}`);
   searchInput.value = "";
+});
+
+//! search advice by id with enter button click
+searchInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    warningMessageDiv.style.visibility = "hidden";
+
+    loadData(`/${searchInput.value}`);
+    searchInput.value = "";
+  }
 });
 
 //! display api data
