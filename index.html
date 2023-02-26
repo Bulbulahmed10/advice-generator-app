@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--!=================== daisyui cdn link ===================-->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
+    <!--!=================== fav-icon ===================-->
+
     <link rel="shortcut icon" href="./images/fav.png" type="image/x-icon" />
     <title>Advice Generator</title>
   </head>
@@ -16,10 +19,16 @@
     <section
       class="w-full h-screen flex flex-col items-center justify-center font-mono"
     >
-      <div id="warning-message" class="alert alert-error shadow-lg w-[240px] mb-3 invisible">
+      <!--!=================== warning-message body ===================-->
+
+      <div
+        id="warning-message"
+        class="alert alert-error shadow-lg w-[240px] mb-3 invisible"
+      >
         <div>
           <span>Advice id not found</span>
-          <svg id="warning-remove"
+          <svg
+            id="warning-remove"
             xmlns="http://www.w3.org/2000/svg"
             class="stroke-current flex-shrink-0 h-6 w-6 cursor-pointer"
             fill="none"
@@ -34,6 +43,8 @@
           </svg>
         </div>
       </div>
+      <!--!=================== main body  ===================-->
+
       <div
         class="flex flex-col items-center shadow-xl p-5 bg-slate-700 rounded-md relative border-2 border-yellow-400"
       >
@@ -58,6 +69,8 @@
           alt=""
         />
       </div>
+      <!--!=================== input & search ===================-->
+
       <div class="mt-14 flex gap-4">
         <input
           type="number"
@@ -69,8 +82,11 @@
         <button id="search-btn" class="border px-4 rounded-md">Search</button>
       </div>
     </section>
+    <!--!=================== tailwindcss cdn link ===================-->
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <!--!=================== custom js link ===================-->
+
     <script src="./script.js"></script>
   </body>
 </html>
