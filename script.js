@@ -64,3 +64,11 @@ document.getElementById("refresh-btn").addEventListener("click", () => {
   loadData("");
 });
 loadData("");
+
+//! loading animations
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader-section");
+  setTimeout(function () {
+    loader.style.display = "none";
+  }, 1000);
+});
