@@ -11,7 +11,7 @@ const loadData = (adviceId) => {
   } catch (err) {
     console.log(err);
   }
-  copyImgBtn.src = "./copy.png";
+  copyImgBtn.src = "./images/copy.png";
   copyImgBtn.style.cursor = "pointer";
 };
 
@@ -34,7 +34,7 @@ const displayData = (advice) => {
 copyImgBtn.addEventListener("click", () => {
   const adviceBodyText = document.getElementById("advice-body").innerText;
   navigator.clipboard.writeText(adviceBodyText);
-  copyImgBtn.src = "./checkmark.png";
+  copyImgBtn.src = "./images/checkmark.png";
   copyImgBtn.style.cursor = "not-allowed";
 });
 
